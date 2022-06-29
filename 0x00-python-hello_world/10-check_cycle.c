@@ -1,4 +1,4 @@
-#include <stdio.h>
+i#include <stdio.h>
 #include <stdlib.h>
 #include "lists.h"
 
@@ -12,21 +12,20 @@
 int check_cycle(listint_t *list)
 {
 	listint_t *load1, *load2;
-
-	if (list == NULL || list->next == NULL)
-		return (0);
-
-	load1 = list->next;
-	load2 = list->next->next;
+	
+	load1 = list;
+	load2 = list;
 
 	while (load1 && load2 && load2->next)
 	{
-		if (load1 == load2)
-			return (1);
-
 		load1 = load1->next;
 		load2 = load2->next->next;
-	}
 
+		if (load1 == load2)
+		{
+			printf("There is a cycle.");
+			return (1);
+		}
+	}
 	return (0);
 }
