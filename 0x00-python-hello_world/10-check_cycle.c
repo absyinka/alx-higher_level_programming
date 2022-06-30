@@ -12,7 +12,7 @@
 int check_cycle(listint_t *list)
 {
 	listint_t *load1, *load2;
-	
+
 	load1 = list;
 	load2 = list;
 
