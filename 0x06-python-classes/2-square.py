@@ -6,12 +6,10 @@ class Square:
     """Square class"""
 
     def __init__(self, size=0):
-        """Initial method with exception.
-        Exception is raised if size is not an integer or is
-        less than 0
+        """New Square initialization
 
         Args:
-                        size (int): The size of the new square with an optional value of 0
+                        size (int): The size of the new square
         """
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
